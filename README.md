@@ -22,7 +22,7 @@ Before implementation, read `PORTFOLIO-BRIEF.md` and `AGENTS.md`.
 
 ## Current phase
 
-**Content structure and authoring conventions.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; reusable Markdown templates and the [content guide](design/CONTENT-GUIDE.md) support the next case studies and Field Notes. Final visual design remains a subsequent work unit.
+**Initial case-study drafting.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; reusable Markdown templates and the [content guide](design/CONTENT-GUIDE.md) support the next case studies and Field Notes. The [first three case-study drafts](design/CASE-STUDY-REVIEW.md) are ready for factual and editorial review outside the public site. Final visual design remains a subsequent work unit.
 
 ## Reference
 
