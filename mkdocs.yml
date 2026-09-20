@@ -1,0 +1,46 @@
+site_name: Michelle Builds
+site_url: https://chelleboyer.github.io/michelle-builds/
+site_description: Software systems, AI-assisted engineering, and experiments by Michelle Boyer.
+site_author: Michelle Boyer
+docs_dir: docs
+site_dir: site
+strict: true
+
+theme:
+  name: material
+  font: false
+  palette:
+    primary: custom
+    accent: custom
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Work: work/index.md
+  - Lab: lab/index.md
+  - How I Build: how-i-build/index.md
+  - Field Notes: notes/index.md
+  - About: about/index.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+
+validation:
+  links:
+    not_found: warn
+    unrecognized_links: warn
+    anchors: warn
+
+extra_css:
+  - assets/stylesheets/extra.css
