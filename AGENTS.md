@@ -4,7 +4,24 @@
 
 Build and maintain Michelle Builds: a living technical portfolio documenting real software systems, AI-assisted engineering, products, robotics experiments, field notes, and the evolving human + agent development process.
 
-Read `PORTFOLIO-BRIEF.md` before planning or implementation.
+Before planning, implementation, or writing public portfolio copy, read:
+
+1. `PORTFOLIO-BRIEF.md`
+2. `context/MICHELLE-WORK-CATALOG.md`
+
+## Factual source of truth
+
+`context/MICHELLE-WORK-CATALOG.md` is the curated factual source of truth for Michelle's experience, projects, project statuses, and publication boundaries.
+
+Do not invent accomplishments, metrics, technologies, outcomes, project statuses, or personal involvement. When the catalog does not contain a fact needed for a story, create a TODO/question for Michelle rather than filling the gap.
+
+Respect the catalog's publication labels:
+
+- `PUBLIC-SAFE` may be used as source material for public content, subject to review.
+- `SANITIZE / ABSTRACT` must be generalized before publication.
+- `CONTEXT-ONLY` must not be published without explicit human approval.
+
+If other project documentation conflicts with an explicit status or factual correction in the work catalog, stop and surface the conflict for human review.
 
 ## Permanent rules
 
@@ -18,6 +35,8 @@ Read `PORTFOLIO-BRIEF.md` before planning or implementation.
 8. Project lifecycle state must be explicit. Never infer `Shipped` because code exists.
 9. Content and presentation must remain separated so new projects and Field Notes can be added without application-code changes.
 10. Use real artifacts to demonstrate skills. Avoid skill meters, generic logo walls, generic AI imagery, invented metrics, and unsupported claims.
+11. Distinguish Michelle's work from work performed by collaborators, vendors, or other teams.
+12. Never turn a tool Michelle has experimented with into an unsupported claim of expertise.
 
 ## OOUX / ORCA gate
 
@@ -52,15 +71,16 @@ Do not begin by building the whole site.
 
 1. Inspect `skyejen/generalist-tech` as a reference implementation.
 2. Read the complete portfolio brief.
-3. Perform OOUX/ORCA analysis.
-4. Define the object model and relationships.
-5. Propose the smallest viable navigation.
-6. Recommend the technical architecture.
-7. Define the Markdown/content schema.
-8. Produce a simple wireframe/navigation model.
-9. Identify the first three project case studies.
-10. Break implementation into small, reviewable issues.
-11. Stop for human approval.
+3. Read `context/MICHELLE-WORK-CATALOG.md` and use it for factual project selection and content planning.
+4. Perform OOUX/ORCA analysis.
+5. Define the object model and relationships.
+6. Propose the smallest viable navigation.
+7. Recommend the technical architecture.
+8. Define the Markdown/content schema.
+9. Produce a simple wireframe/navigation model.
+10. Identify the first three project case studies and any factual gaps requiring Michelle's input.
+11. Break implementation into small, reviewable issues.
+12. Stop for human approval.
 
 ## Design direction
 
