@@ -55,7 +55,7 @@ This describes the evolving process, not evidence that every experimental run ha
 
 ## Decisions & Tradeoffs
 
-**Model the product before generating its screens.** I am incorporating OOUX/ORCA to give agents an explicit object model before they propose navigation. This responds to observed UX complexity in otherwise simple applications. It adds a design gate, but the gate is intentionally cheaper than repairing a navigation model after implementation.
+**Model the product before generating its screens.** I am incorporating OOUX/ORCA to give agents an explicit object model before they propose navigation. This responds to observed UX complexity in otherwise simple applications. It adds a design gate intended to avoid reworking navigation after implementation.
 
 **Fresh review after repair.** In one factory run, the repair stage addressed the findings it had been given, but the next broader review surfaced additional issues, including ordering, identity/email-normalization, password-length, and factory-level review concerns. That exposed a process flaw: verifying only the known findings after a repair is not equivalent to reviewing the repaired change. The factory therefore treats repair as producing a new review candidate rather than as proof that the work is complete.
 
@@ -67,7 +67,7 @@ The factory is an active experiment. It now has concrete process safeguards deri
 
 The product test bed remains in development. This case study does not claim a measured change in delivery speed, quality, cost, or user outcomes. The evidence is narrower: the factory has surfaced defects in its own workflow and those findings have changed the workflow.
 
-A useful artifact for this story is the PR/review trail from a factory run that shows implementation, findings, repair, and the subsequent broader review. Publication should use only a reviewed public PR or sanitized excerpt.
+The approved artifact for this story is the real public PR/review trail from a factory run showing implementation, findings, repair, and the subsequent broader review. Public presentation may summarize or sanitize the trail where appropriate rather than manufacturing a cleaner example.
 
 ## Lessons
 
