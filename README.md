@@ -22,7 +22,7 @@ Before implementation, read `PORTFOLIO-BRIEF.md` and `AGENTS.md`.
 
 ## Current phase
 
-**Static-site foundation.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; case studies, Field Notes, and final visual design are subsequent work units.
+**Content structure and authoring conventions.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; reusable Markdown templates and the [content guide](design/CONTENT-GUIDE.md) support the next case studies and Field Notes. Final visual design remains a subsequent work unit.
 
 ## Reference
 
@@ -53,6 +53,17 @@ is published; the brief, factual catalog, and design documents stay outside the
 site input directory. Keep reviewed public copy and approved assets in `docs/`.
 Do not copy private source material there.
 
+## Add content
+
+Start with the [content guide](design/CONTENT-GUIDE.md) and the templates in
+`templates/`. Draft outside `docs/`; move only reviewed public copy into the site.
+Add a relative Markdown link in the appropriate section index. No application-code
+or navigation-configuration changes are needed for individual entries.
+
+Custom front matter records editorial metadata; visible summaries, status, dates,
+and related links are ordinary Markdown and must be kept in sync. Indexes are
+manually curated for the MVP.
+
 ## Publication
 
 The Site workflow builds pull requests and changes to `main` and uploads the
@@ -70,6 +81,6 @@ explicit configuration change. Agents do not trigger release workflows.
 ## Next work
 
 Follow the remaining [implementation work units](design/ARCHITECTURE-ORCA.md#13-implementation-work-units-after-approval):
-content conventions, reviewed case studies, the workflow diagram, responsive and
+reviewed case studies, the workflow diagram, responsive and
 accessibility review, and final release validation. The current foundation is
 not a declaration that the portfolio is ready to publish.
