@@ -9,6 +9,24 @@ Before planning, implementation, or writing public portfolio copy, read:
 1. `PORTFOLIO-BRIEF.md`
 2. `context/MICHELLE-WORK-CATALOG.md`
 
+## Repository roles and references
+
+### `chelleboyer/michelle-builds`
+
+This is the product repository. All portfolio application code, content, configuration, tests, documentation, and deployment configuration belong here.
+
+### `chelleboyer/archon`
+
+This is Michelle's factory/orchestration reference. Inspect it to understand how Michelle structures agent-driven planning, implementation, review, repair loops, gates, and human approval.
+
+Use Archon to inform **how you work**, not what the portfolio application becomes.
+
+Do not copy Archon into this repository. Do not make the portfolio depend on Archon at runtime. Do not modify `chelleboyer/archon` unless Michelle explicitly requests it.
+
+### `skyejen/generalist-tech`
+
+This is a portfolio reference implementation. Inspect it for useful architectural and presentation patterns, but do not copy its content, branding, writing, personal information, or information architecture blindly.
+
 ## Factual source of truth
 
 `context/MICHELLE-WORK-CATALOG.md` is the curated factual source of truth for Michelle's experience, projects, project statuses, and publication boundaries.
@@ -69,18 +87,21 @@ Michelle owns final review, merge, and release decisions.
 
 Do not begin by building the whole site.
 
-1. Inspect `skyejen/generalist-tech` as a reference implementation.
-2. Read the complete portfolio brief.
-3. Read `context/MICHELLE-WORK-CATALOG.md` and use it for factual project selection and content planning.
-4. Perform OOUX/ORCA analysis.
-5. Define the object model and relationships.
-6. Propose the smallest viable navigation.
-7. Recommend the technical architecture.
-8. Define the Markdown/content schema.
-9. Produce a simple wireframe/navigation model.
-10. Identify the first three project case studies and any factual gaps requiring Michelle's input.
-11. Break implementation into small, reviewable issues.
-12. Stop for human approval.
+1. Inspect `chelleboyer/archon` as the factory/orchestration reference and understand the distinction described above.
+2. Inspect `skyejen/generalist-tech` as the portfolio reference implementation.
+3. Read the complete portfolio brief.
+4. Read `context/MICHELLE-WORK-CATALOG.md` and use it for factual project selection and content planning.
+5. Perform OOUX/ORCA analysis.
+6. Define the object model and relationships.
+7. Propose the smallest viable navigation.
+8. Recommend the technical architecture.
+9. Define the Markdown/content schema.
+10. Produce a simple wireframe/navigation model.
+11. Identify the first three project case studies and any factual gaps requiring Michelle's input.
+12. Break implementation into small, reviewable issues.
+13. Stop for human approval.
+
+For this first assignment, do not implement the production site. Commit the architecture/design documentation to a branch and open a pull request against `main`. The pull request should include findings, ORCA/object model, architecture, navigation, content model, wireframe, implementation plan, proposed work units, assumptions, unresolved questions, and deliberate non-goals. Then stop for Michelle's review.
 
 ## Design direction
 
