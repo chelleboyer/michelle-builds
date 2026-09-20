@@ -1,5 +1,8 @@
 # PR #5 — Review after independent-review repairs
 
+Historical review of `711d668`; both findings below are resolved by the human-confirmed repairs and catalog synchronization.
+See the [current complete review](pr-5-complete-review.md) for the present disposition.
+
 Reviewed head: `711d6682c0844108aee9a1fd3ccea2febc85c75c`.
 Previous local head: `eb2491f645e35f3a7582051c542ca3c45077bdfb`.
 

@@ -6,6 +6,15 @@ This file is curated factual context for coding and content agents working on Mi
 
 This is not automatically public copy.
 
+## Confirmed editorial updates
+
+The case-study facts below incorporate Michelle's human-confirmed PR #5 repairs,
+recorded in [the interview decisions](../design/CASE-STUDY-REVIEW.md) at commit
+`651550e` on 2026-09-20, including the factory wording repair (`bd719df`) and
+retail-system clarification (`3afc228`). Michelle explicitly requested this catalog
+synchronization. These confirmations refine the earlier catalog; they do not
+change publication labels or authorize an agent to merge or release the site.
+
 ## Publication labels
 
 - **PUBLIC-SAFE** — suitable as source material for public portfolio content, subject to normal editorial review.
@@ -38,7 +47,42 @@ Do not publish employer staffing details, employee names, internal schedules, or
 
 **SANITIZE / ABSTRACT**
 
-Michelle has designed and worked on a distributed price-book processing architecture supporting a multi-store retail environment. The system coordinates store-specific work across multiple worker machines, uses a central job-history/queue pattern, prevents duplicate processing, tracks worker claims and status, and supports operational troubleshooting.
+Status: **In development / integration**.
+
+Michelle designed a distributed price-book processing and orchestration approach
+for a multi-location retail environment. A required vendor-side change could not
+move at the speed the business needed. The approach centralizes the existing
+location workflow using worker VMs rather than waiting for or rewriting the
+vendor process. It reproduces centrally what a location already does.
+
+Michelle's contribution includes the distributed architecture, central job/history
+model, worker-claiming and duplicate-prevention concepts, VM Manager/orchestration
+design, and hands-on development and testing of the existing application automation.
+Other contributors own or support adjacent ETL, data-loading, and downstream work;
+do not present this as Michelle's sole implementation.
+
+**Tested boundary:** the existing location-side application can be terminated when
+necessary, configured for a target location, launched, and used to generate that
+location's price-book output, repeating through locations in a loop. Michelle
+confirmed this application-automation path has been tested successfully.
+
+**Not yet proven:** the VM Manager and the complete distributed system. The next
+milestone is to finalize the worker VM specification and test the VM Manager
+against the worker fleet. Do not infer production deployment, throughput, uptime,
+time savings, or production-scale performance from the successful execution loop.
+
+The design separates orchestration from execution and uses central job/history
+tracking for claims, status, and operational visibility. Atomic claiming and
+duplicate prevention belong to the job-coordination boundary; they are not an
+end-to-end exactly-once guarantee.
+
+Michelle approved a sanitized public architecture diagram limited to this shape:
+
+**Central Job Queue / History → VM Manager → Fleet of Worker VMs → Existing Location Application → Store-equivalent Price Book Output**
+
+This permission covers generalized responsibilities, not confidential implementation
+details. The engineering lesson is that distribution can serve compatibility with
+an existing workflow, while a tested execution path does not prove orchestration.
 
 Architectural themes that are safe to discuss in generalized form include:
 
@@ -51,7 +95,7 @@ Architectural themes that are safe to discuss in generalized form include:
 - orchestration of worker infrastructure
 - separation of job orchestration from job execution
 
-Do not publish store counts, internal service names, infrastructure identifiers, schedules, internal database/table names, vendor implementation details, or proprietary processing formats without explicit approval.
+Do not publish employer/vendor identity, location counts, internal service/table names, schedules, credentials, infrastructure identifiers, vendor implementation details, or proprietary processing formats. The approved diagram must retain these exclusions.
 
 ## POS / data platform
 
@@ -226,6 +270,26 @@ A central principle is:
 
 The process is evolving. Do not present it as a finished methodology or universal best practice.
 
+### Confirmed repair-loop lesson and evidence
+
+Michelle designs and tests the development process, incorporates OOUX/ORCA,
+reviews its outputs, and retains final merge authority. In a confirmed factory
+run, a repair stage addressed known findings, but a subsequent broader review
+surfaced additional concerns involving ordering, identity/email normalization,
+password length, and factory-level review behavior.
+
+The supported lesson is narrow: repairing known findings is not a substitute for
+a fresh complete review of the repaired change. Repairs produce a new review
+candidate, not proof that the work is complete. These workflow findings have
+informed safeguards including object modeling, fresh review after repair,
+validation gates, and human-owned merge decisions. Do not claim measured
+productivity, quality, cost, or user-outcome improvement from this incident.
+
+Michelle approved the real public PR/review history as the evidence artifact,
+with summarization or sanitization where appropriate. Select the specific trail
+and review its presentation before public use; do not manufacture a cleaner
+example or treat approval of the artifact type as selection of a specific URL.
+
 ---
 
 # OOUX / ORCA
@@ -236,7 +300,9 @@ Michelle identified UX/navigation design as a missing layer in her software-fact
 
 This arose partly from observing that agents could make a fundamentally simple application unnecessarily complicated when allowed to invent UI structure without a strong object model.
 
-This is an important theme for the How I Build section.
+This is an important theme for the How I Build section. The design gate is
+intended to avoid later navigation rework; no comparative cost saving has been
+established. Do not describe it as proven cheaper than implementation rework.
 
 ---
 
@@ -264,11 +330,30 @@ Treat individual tools as concepts/experiments unless their status is explicitly
 
 # Microduck robotics
 
-## microduck_rl
+## Current experimentation and training workflow
 
 **PUBLIC-SAFE**
 
-This is the actual reinforcement-learning/training workspace for Microduck experiments.
+Status: **Experiment**.
+
+Michelle is adapting the public working fork
+[`chelleboyer/microduck-lab`](https://github.com/chelleboyer/microduck-lab) as her
+behavior-design and training experimentation environment. It uses CPU-friendly
+MuJoCo with Stable-Baselines3/PPO and supports Linux/VPS work without depending
+on a local GPU. The lab preserves the Microduck observation/action/control
+contract. Its responsibilities include environments, rewards, behavior definitions,
+training configuration, evaluation, and experiment artifacts.
+
+`microduck_rl` remains the official training stack and is the graduation target
+for promising behaviors. Ideas from the lab must be ported/retrained there for
+higher-fidelity and sim-to-real work before physical deployment is claimed.
+The tradeoff is iteration speed versus simulation fidelity: a promising lab
+behavior is evidence for further work, not a completed robot capability.
+
+Archon organizes the engineering workflow around the experimentation repository;
+it is not part of the robot runtime. Duck Factory remains separate observability
+tooling, as specified below. This current arrangement adds the lab experimentation
+stage to the earlier catalog's description of `microduck_rl` as the training workspace.
 
 Michelle's goals include teaching or experimenting with behaviors such as:
 
@@ -281,7 +366,23 @@ Michelle's goals include teaching or experimenting with behaviors such as:
 
 The work uses simulation/training tooling and is designed to accommodate a cloud/VPS-based workflow because Michelle does not rely on a local GPU.
 
-Do not claim a behavior has been successfully trained unless there is explicit evidence/status confirming it.
+Balance/recovery and hopping are intended foundations before compound behaviors
+such as hopscotch. These are stages and goals, not confirmed achievements.
+Do not claim a behavior has been successfully trained or transferred to physical
+hardware unless there is explicit evidence/status confirming it.
+
+### Approved artifact and attribution
+
+Michelle approved the public working lab repository as the current case-study
+artifact. A real training run, successful, failed, or incomplete, may be added
+later when its observed result is ready and reviewed. A training-run artifact
+is not required to complete the current editorial draft package.
+
+Credit the upstream [Microduck Lab project](https://github.com/jonathanhawkins/microduck-lab)
+and Pollen Robotics for Microduck where appropriate. Michelle confirmed no
+additional individual collaborator credit is currently required. Do not present
+the robot/training stack as Michelle's original work or attribute upstream demos,
+benchmarks, or achievements to her.
 
 ## Duck Factory
 

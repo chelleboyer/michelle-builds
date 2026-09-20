@@ -1,5 +1,8 @@
 # Implementation report — Initial case-study drafts
 
+Historical implementation snapshot from `eb2491f`; factual gaps described below were subsequently resolved by the human interview.
+See the [current complete review](../code-reviews/pr-5-complete-review.md) for the present disposition.
+
 Plan: `design/ARCHITECTURE-ORCA.md`, work unit 3.
 Branch: `feat/initial-case-studies`.
 Status: Draft package complete; public case-study pages pending factual/editorial review.

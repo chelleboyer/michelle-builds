@@ -56,7 +56,7 @@ No factual interview question currently blocks this draft package. Before promot
 - Select the specific public Mostly Human PR/review trail and review its presentation.
 - For Microduck, use the working lab repo now; add a training-run artifact only when an actual run is ready and reviewed.
 - Create only the approved generalized retail architecture diagram; do not reconstruct confidential implementation details.
-- Synchronize these confirmed facts into the curated work catalog so future agents do not have to infer them from draft prose.
+- Confirmed facts are now synchronized in the [curated work catalog](../context/MICHELLE-WORK-CATALOG.md), including provenance, lifecycle/test boundaries, contribution, attribution, and artifact permissions.
 - Run a strict build and rendered-content review before Michelle's merge decision.
 - Deployment remains a separate human action.
 
