@@ -1,0 +1,32 @@
+:root {
+  --md-primary-fg-color: #234b46;
+  --md-accent-fg-color: #17685c;
+  --md-text-font: system-ui, sans-serif;
+  --md-code-font: ui-monospace, monospace;
+}
+
+.md-typeset {
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.md-content__inner {
+  max-width: 52rem;
+  margin-bottom: 4rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 3px;
+}
