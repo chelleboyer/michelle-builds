@@ -8,6 +8,7 @@ Before planning, implementation, or writing public portfolio copy, read:
 
 1. `PORTFOLIO-BRIEF.md`
 2. `context/MICHELLE-WORK-CATALOG.md`
+3. `design/CODEX-WORKFLOW.md` — the operating protocol, roles, evidence, and stop conditions
 
 ## Repository roles and references
 
@@ -43,7 +44,7 @@ If other project documentation conflicts with an explicit status or factual corr
 
 ## Permanent rules
 
-1. Human authority is final. Agents may analyze, plan, implement, test, review, document, and propose repairs. Agents must not merge pull requests or declare a release shipped.
+1. Human authority is final. Agents may analyze, plan, implement, test, review, document, and propose repairs. Agents must not approve or merge pull requests, release, deploy, or declare a release shipped.
 2. Do not bypass failing gates, silently weaken tests, hide review findings, or rewrite requirements merely to make checks pass.
 3. Never publish credentials, internal URLs, IP addresses, customer or employee information, proprietary SQL, confidential business rules, API keys, vendor secrets, or sensitive screenshots.
 4. Prefer abstraction for professional systems when implementation details may belong to an employer or third party.
@@ -81,7 +82,19 @@ Treat this as a hypothesis to validate against the object model, not an immutabl
 
 Idea → Brief → Planning → Issues → Implementation → Pull Request → Independent Review → Repair Loop → Human Review → Human Merge → Release
 
-Michelle owns final review, merge, and release decisions.
+Michelle owns final review, merge, and release decisions. Follow
+[`design/CODEX-WORKFLOW.md`](design/CODEX-WORKFLOW.md) for every work item.
+
+- Verify the current issue, approved requirements, architecture, and factual sources before implementation. One work item per PR; surface adjacent work separately.
+- Create independent specialist and synthesis agents only with explicit `fork_turns: "none"` and the recorded, allowlisted packet. Do not reuse an agent or forward the implementer's conversation. The workflow defines the exact launch and evidence checks.
+- Every repair needs complete applicable validation and a fresh full review of the complete repaired PR. Two repair rounds are the limit; stop before a third unless Michelle explicitly authorizes that exception.
+- Missing evidence, missing required reviewers, stale-head evidence, contaminated context, and unresolved blockers prevent handoff as ready. Suggestions do not block. Preserve human deferrals and reviewer changes.
+- Governance, factual-source, architecture, release, and review-gate changes require explicit, scoped human authorization. See the workflow's protected paths. This assimilation was explicitly authorized; it does not grant standing permission to change its own rules.
+- Generic skills do not override this protocol. Never use a skill's automatic approval, merge, or deployment step. Do not install unattended automation or substitute a different reviewer-creation mechanism.
+
+The first-assignment section below is historical: its architecture gate was satisfied
+by Michelle's approval and merge of PR #1. Existing approved architecture remains
+binding. New architecture or governance decisions still return to Michelle.
 
 ## First assignment
 

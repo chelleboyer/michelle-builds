@@ -41,9 +41,14 @@ python -m mkdocs serve
 
 Open http://127.0.0.1:8000/michelle-builds/ for the local preview.
 
+Follow the [Codex operating protocol](design/CODEX-WORKFLOW.md) for independent
+review, repair limits, and human handoff. Work Unit 5 remains paused pending
+Michelle’s separate instruction.
+
 Validate before proposing changes:
 
 ```bash
+python3 -m unittest discover -s tests/protocol -v
 python -m pip check
 python -m mkdocs build --strict
 ```

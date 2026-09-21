@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/chelleboyer/michelle-builds",
+  "checkout": "REPLACE_WITH_CLEAN_REVIEW_CHECKOUT",
+  "pr": "REPLACE_WITH_PR_NUMBER_OR_URL",
+  "base": "REPLACE_WITH_FULL_BASE_SHA",
+  "head": "REPLACE_WITH_FULL_HEAD_SHA",
+  "merge_base": "REPLACE_WITH_FULL_MERGE_BASE_SHA",
+  "round": 1,
+  "repair_rounds": 0,
+  "previous_review_head": null,
+  "requirements": ["design/CODEX-ASSIMILATION-PLAN.md"],
+  "human_decisions": [],
+  "human_deferrals": [],
+  "validation": ["python3 -m unittest discover -s tests/protocol -v", "python -m pip check", "python -m mkdocs build --strict"],
+  "optional_lenses": {
+    "errors": {"required": true, "reason": "Assimilation changes refusal and evidence-handling behavior."},
+    "docs": {"required": true, "reason": "Assimilation changes agent operating instructions."}
+  },
+  "authorized_paths": [],
+  "authorization_source": "",
+  "repair_exception_source": ""
+}
