@@ -22,7 +22,7 @@ Before implementation, read `PORTFOLIO-BRIEF.md` and `AGENTS.md`.
 
 ## Current phase
 
-**Initial case-study drafting.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; reusable Markdown templates and the [content guide](design/CONTENT-GUIDE.md) support the next case studies and Field Notes. The [first three case-study drafts](design/CASE-STUDY-REVIEW.md) are ready for factual and editorial review outside the public site. Final visual design remains a subsequent work unit.
+**Build-process documentation.** Michelle merged the [ORCA and architecture proposal](design/ARCHITECTURE-ORCA.md) in [PR #1](https://github.com/chelleboyer/michelle-builds/pull/1). The foundation provides navigation and section introductions; reusable Markdown templates and the [content guide](design/CONTENT-GUIDE.md) support the next case studies and Field Notes. The [first three case-study drafts](design/CASE-STUDY-REVIEW.md) are ready for factual and editorial review outside the public site. The How I Build section now documents the workflow and three initial practices. Case-study publication preparation and final visual design remain subsequent work.
 
 ## Reference
 
@@ -81,6 +81,6 @@ explicit configuration change. Agents do not trigger release workflows.
 ## Next work
 
 Follow the remaining [implementation work units](design/ARCHITECTURE-ORCA.md#13-implementation-work-units-after-approval):
-reviewed case studies, the workflow diagram, responsive and
+case-study publication preparation, responsive and
 accessibility review, and final release validation. The current foundation is
 not a declaration that the portfolio is ready to publish.

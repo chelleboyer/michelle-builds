@@ -30,3 +30,12 @@
   outline: 3px solid var(--md-accent-fg-color);
   outline-offset: 3px;
 }
+
+/* Keep the workflow readable on narrow screens without stretching it on desktop. */
+.md-typeset .build-process-diagram {
+  display: block;
+  width: 100%;
+  max-width: 22.5rem;
+  height: auto;
+  margin: 1.5rem auto;
+}
